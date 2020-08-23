@@ -1,0 +1,2 @@
+Sequelize-auto -o "./src/graphql/models/generated" 
+-d dashboard_management -h localhost -u root -p -x -e mysql
