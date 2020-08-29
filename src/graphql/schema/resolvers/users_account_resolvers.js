@@ -9,7 +9,7 @@ export default {
   Mutation: {
     MutateUserAccount: async (_, { data }, { db }) => {
       const response = await db.models.users_account.create(data);
-      return userAccount.dataValues;
+      return response.dataValues;
     },
   },
 };
