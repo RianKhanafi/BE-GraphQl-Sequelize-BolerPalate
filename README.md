@@ -8,7 +8,7 @@ Yang digunakan pada projek boilerplate ini
 
 
 contoh kode:
-
+```
 import gql from "graphql-tag";
 export default gql`
   type users_account {
@@ -46,5 +46,5 @@ export default gql`
     MutateUserAccount(data: inputUserAccount): users_account
   }
 `;
-
+```
 cara menjalankan `yarn start`
