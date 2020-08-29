@@ -1,4 +1,5 @@
-#Bakend Graphql dan Squalize BoilerPlale
+
+## Bakend Graphql dan Squalize BoilerPlale
 
 Yang digunakan pada projek boilerplate ini
 1. Node.js (Runtime Javascript)
@@ -69,4 +70,4 @@ export default {
 };
 
 ```
-cara menjalankan `yarn start`
+Cara menjalankan `yarn start`
