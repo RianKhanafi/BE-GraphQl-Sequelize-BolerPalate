@@ -7,11 +7,8 @@ import { ApolloServer } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
 import { typeDefs, resolvers } from "./graphql";
 import router from "./api/ApiRouter";
-// import Parse from "json-parse";
-const app = express();
-// app.use(Parser.urlencoded({ extended: true }));
-// app.use(Parser.json({ limit: "500mb" }));
-// app.use(cors());
+
+const server = express();
 
 const schema = new ApolloServer({
   schema: makeExecutableSchema({ typeDefs, resolvers }),
@@ -26,37 +23,33 @@ const schema = new ApolloServer({
   },
 });
 
-schema.applyMiddleware({ app: app });
-app.use(router);
+schema.applyMiddleware({ app: server });
+server.use(router);
 function setPort(port = 5000) {
-  app.set("port", parseInt(port, 10));
+  server.set("port", parseInt(port, 10));
 }
 function listen() {
-  const port = app.get("port") || config.port;
-  app.listen(port, () => {
+  const port = server.get("port") || config.port;
+  server.listen(port, () => {
     console.log(
       `The server is running and listening at http://localhost:${port}`
     );
   });
 }
 
-app.use(
+server.use(
   cors({
-    origin: config.corsDomain, // Be sure to switch to your production domain
+    origin: config.corsDomain,
     optionsSuccessStatus: 200,
   })
 );
 
 // Endpoint to check if the API is running
-app.get("/api/status", (req, res) => {
+server.get("/api/status", (req, res) => {
   res.send({ status: "ok" });
 });
 
-// Append apollo to our API
-// apollo(app);
-
 export default {
-  getApp: () => app,
   setPort,
   listen,
 };
