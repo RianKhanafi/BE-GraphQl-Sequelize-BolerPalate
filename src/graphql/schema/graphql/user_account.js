@@ -11,6 +11,7 @@ export default gql`
     link_facebok: String
     link_linkdln: String
     portofolio_id: String
+    ttl: DateTime
   }
 
   type Query {
