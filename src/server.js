@@ -5,10 +5,15 @@ import db from "./graphql/models/database";
 import config from "./config";
 import { ApolloServer } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
+import Parser from "body-parser";
 import { typeDefs, resolvers } from "./graphql";
 import router from "./api/ApiRouter";
 
 const server = express();
+
+server.use(Parser.json());
+// use body parser form form url-encoded
+server.use(Parser.urlencoded({ extended: true }));
 
 const schema = new ApolloServer({
   schema: makeExecutableSchema({ typeDefs, resolvers }),
