@@ -14,7 +14,24 @@ export default gql`
     ttl: DateTime
   }
 
+  input inputUserAccount {
+    username: String
+    email: String
+    tags_id: Int
+    photo: String
+    password: String
+    link_instagram: String
+    link_facebok: String
+    link_linkdln: String
+    portofolio_id: String
+    ttl: DateTime
+  }
+
   type Query {
     users_account: [users_account]
+  }
+
+  type Mutation {
+    MutateUserAccount(data: inputUserAccount): users_account
   }
 `;

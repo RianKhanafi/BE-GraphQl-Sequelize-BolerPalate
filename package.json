@@ -21,6 +21,7 @@
     "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
     "graphql-tools": "^6.0.18",
+    "graphql-type-datetime": "^0.2.4",
     "lodash": "^4.17.20",
     "merge-graphql-schemas": "^1.7.8",
     "mysql": "^2.18.1",

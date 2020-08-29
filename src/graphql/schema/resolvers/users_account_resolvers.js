@@ -6,4 +6,10 @@ export default {
       return users;
     },
   },
+  Mutation: {
+    MutateUserAccount: async (_, { data }, { db }) => {
+      const response = await db.models.users_account.create(data);
+      return userAccount.dataValues;
+    },
+  },
 };

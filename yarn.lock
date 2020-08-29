@@ -3517,6 +3517,13 @@ graphql-tools@^6.0.18:
     "@graphql-tools/utils" "6.0.18"
     "@graphql-tools/wrap" "6.0.18"
 
+graphql-type-datetime@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/graphql-type-datetime/-/graphql-type-datetime-0.2.4.tgz#438cd3886ad2c7898af057ee3c4a5666bd153095"
+  integrity sha512-R/4Y7L+7WtBfW3g2WGv4NcU+hSPPES4JsiDzLl8sj30hEDxQyIwvJ2yJi8DGcBE8s325B6Q4ky5qwicZ7F0b7A==
+  dependencies:
+    moment "^2.22.2"
+
 graphql-upload@^8.0.2:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/graphql-upload/-/graphql-upload-8.1.0.tgz#6d0ab662db5677a68bfb1f2c870ab2544c14939a"
@@ -4417,7 +4424,7 @@ moment-timezone@^0.5.31:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.26.0:
+"moment@>= 2.9.0", moment@^2.22.2, moment@^2.26.0:
   version "2.27.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
   integrity sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
