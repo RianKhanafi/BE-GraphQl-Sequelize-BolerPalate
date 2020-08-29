@@ -1,5 +1,5 @@
 
-## Bakend Graphql dan Squalize BoilerPlale
+## Bakend Graphql dan Squalize BoilerPlate
 
 Yang digunakan pada projek boilerplate ini
 1. Node.js (Runtime Javascript)
@@ -8,7 +8,7 @@ Yang digunakan pada projek boilerplate ini
 4. Squalize (ORM)
 
 
-Contoh Schema:
+#### Contoh Schema:
 ```
 import gql from "graphql-tag";
 export default gql`
@@ -50,7 +50,7 @@ export default gql`
 ```
 
 
-Contoh Resolvers
+#### Contoh Resolvers:
 
 ```
 export default {
