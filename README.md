@@ -1,5 +1,5 @@
 
-## Bakend Graphql dan Squalize BoilerPlate
+## Backend Graphgl dan Sequalize Boilerplate
 
 Yang digunakan pada projek boilerplate ini
 1. Node.js (Runtime Javascript)
