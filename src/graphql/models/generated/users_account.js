@@ -56,6 +56,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(15),
       allowNull: true
     },
+    token: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: false

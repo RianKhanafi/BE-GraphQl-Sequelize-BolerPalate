@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const AuthenticationToken = (req, res, next) => {
+  console.log(req);
   let token =
     req.headers["x-access-token"] ||
     req.headers["authorization"] ||
@@ -14,7 +15,7 @@ const AuthenticationToken = (req, res, next) => {
         if (err) {
           return res.status(401).json({
             success: 401,
-            message: "Auth token is not Expired",
+            message: "Auth token Expired",
           });
         } else {
           req.decoded = decoded;

@@ -8,11 +8,12 @@ import { makeExecutableSchema } from "graphql-tools";
 import Parser from "body-parser";
 import { typeDefs, resolvers } from "./graphql";
 import router from "./api/ApiRouter";
+import dotenv from "dotenv";
 
+dotenv.config();
 const server = express();
 
 server.use(Parser.json());
-// use body parser form form url-encoded
 server.use(Parser.urlencoded({ extended: true }));
 
 const schema = new ApolloServer({
@@ -49,7 +50,6 @@ server.use(
   })
 );
 
-// Endpoint to check if the API is running
 server.get("/api/status", (req, res) => {
   res.send({ status: "ok" });
 });
