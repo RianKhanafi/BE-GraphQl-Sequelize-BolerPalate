@@ -6,7 +6,11 @@ Yang digunakan pada projek boilerplate ini
 2. Express.js 
 3. Graphql 
 4. Squalize (ORM)
+5. nodemailer
 
+#### Fitur
+1. Login
+2. Lupa password (with email)
 
 #### Contoh Schema:
 ```
